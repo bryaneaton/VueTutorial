@@ -10,7 +10,10 @@
 </head>
 <body>
 <div id="app">
-    <p>{{ sayHello() }}</p>
+    <h1 v-once>{{ title }}</h1>
+    <p>{{ sayHello() }} -<a v-bind:href="link">Google</a> </p>  <!--vbind directive--->
+    <hr>
+    <p v-html="finishedLink"></p>  <!--possibly exposes you to xss attacks--->
 </div>
 <script src="js/main.js"></script>
 </body>

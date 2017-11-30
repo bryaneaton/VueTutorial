@@ -7,13 +7,14 @@
     <meta name="author" content="SitePoint">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
     <script src="js/vue.js"></script>
+
 </head>
 <body>
+
 <div id="app">
-    <h1 v-once>{{ title }}</h1>
-    <p>{{ sayHello() }} -<a v-bind:href="link">Google</a> </p>  <!--vbind directive--->
-    <hr>
-    <p v-html="finishedLink"></p>  <!--possibly exposes you to xss attacks--->
+    <button v-on:click="increase">Click Me</button>
+    <p>{{ counter }}</p>
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
 </div>
 <script src="js/main.js"></script>
 </body>

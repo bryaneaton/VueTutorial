@@ -17,6 +17,7 @@
     <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}
          <span v-on:mousemove.stop="dummy">DEAD SPOT</span>  <!--- stop propagation-->
     </p>
+    <input type="text" v-on:keyup.enter.space="alertMe">
 </div>
 <script src="js/main.js"></script>
 </body>

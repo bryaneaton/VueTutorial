@@ -7,12 +7,17 @@ new Vue({
     },
     methods: {
         increase: function (step, event) {
-            this.counter += step;
+            if(this.counter === 0) {this.counter += 1}
+            else {this.counter *= step;}
+
 
         },
         updateCoordinates: function(event) {
             this.x = event.clientX;
             this.y = event.clientY;
+        },
+        alertMe: function () {
+            alert('Alert!')
         }
     }
 });
